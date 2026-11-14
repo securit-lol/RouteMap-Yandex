@@ -1,35 +1,18 @@
 # RouteMap
-This fork enhances the original demo by integrating Yandex Schedule API, allowing users to visualize transport stations and build routes directly on the map.
-Route searches and all interactions with the Yandex API are performed on a separate background thread. This ensures that the main GUI thread remains responsive and smooth even during network requests or complex data processing.
 
-## Screenshots
+Fork of ImOsmDemo. Shows transport stations on an OpenStreetMap map and builds routes between them using the Yandex Schedule API.
 
-![image2](doc/show2.gif)
-![image1](doc/show1.png)
+Requests to the Yandex API and route searches run on a separate thread, so the window doesn't freeze while waiting for the network.
 
+![demo](doc/show2.gif)
+![map](doc/show1.png)
 
 ## Ubuntu dependencies
 
-For ImGui with GLFW backend the following packages must be installed
-```
-libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev freeglut3-dev
-```
-For ImOsmWidget libcurl needed
-```
-libcurl4-gnutls-dev
-```
+ImGui with the GLFW backend needs:
 
-## Fork Improvements
+    sudo apt install libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev freeglut3-dev
 
-Compared to the original ImOsmDemo:
+ImOsmWidget needs libcurl:
 
-- Added Yandex API integration
-- Added transport station rendering
-- Added route calculation
-
-## Credits
-
-- ImOsmDemo project
-- ImOsmWidget
-- OpenStreetMap
-- Yandex Schedule API
+    sudo apt install libcurl4-gnutls-dev
